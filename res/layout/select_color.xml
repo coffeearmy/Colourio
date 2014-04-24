@@ -8,27 +8,35 @@
         android:id="@+id/txtColorCode"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/btnSaveColor"
+        android:layout_above="@+id/rdgOptionColor"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal|bottom"
         android:text="#234454"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
-        android:id="@+id/btnSaveColor"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/rdgOptionColor"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="Save " />
+        android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/btnDiscardColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="Discard" />
+        <RadioButton
+            android:id="@+id/rdbDiscardColor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Discard" />
+
+        <RadioButton
+            android:id="@+id/rdbSaveColor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save " />
+
+    </RadioGroup>
 
 </RelativeLayout>

@@ -13,6 +13,8 @@ import com.etsy.android.grid.StaggeredGridView;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -124,6 +126,10 @@ public class StaggeredGridFragment extends Fragment implements
 	@Override
 	public void onItemClick(AdapterView<?> adapterView, View view,
 			int position, long id) {
+		FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+		Fragment newFragment = SaveColorFragment.newInstance();
+		ft.addToBackStack(null).replace(R.id.content_frame,newFragment, SaveColorFragment.FRAGMENT_TAG).commit();
+		
 		Toast.makeText(getActivity(), "Item Clicked: " + position,
 				Toast.LENGTH_SHORT).show();
 	}

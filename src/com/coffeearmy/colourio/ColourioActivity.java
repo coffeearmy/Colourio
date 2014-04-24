@@ -39,7 +39,7 @@ public class ColourioActivity extends ActionBarActivity {
 
 	private void createFragments() {
 		FragmentManager fm = getSupportFragmentManager();
-		Fragment fragment = new CustomCameraFragment();//StaggeredGridFragment.newInstance(this, null);
+		Fragment fragment =StaggeredGridFragment.newInstance(this, null);// new CustomCameraFragment();
 		fm.beginTransaction()
 				.replace(R.id.content_frame, fragment, "StaggeredGridView")
 				.commit();

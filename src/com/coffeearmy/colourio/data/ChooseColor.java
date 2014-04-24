@@ -9,7 +9,12 @@ public class ChooseColor implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	public enum ColorState { NOT_CHOOSE, INDEF, CHOOSE};
-	ColorState state;
-	Color color;
+	public static enum ColorState { NOT_CHOOSE, INDEF, CHOOSE};
+	public ColorState state=ColorState.INDEF;
+	public int color;
+	
+	public ChooseColor(int c,ColorState s) {
+		color=c;
+		state=s;
+	}
 }
